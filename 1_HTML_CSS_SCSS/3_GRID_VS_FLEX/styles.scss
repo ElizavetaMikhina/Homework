@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+$title-font-size: 18px;
+$description-font-size: 12px;
+
+@mixin main-title {
+    text-align: center;
+    position: relative;
+}
+
+@mixin card-title {
+    font-size: $title-font-size;
+    margin-bottom: 10px;
+}
+
+@mixin card-description {
+    font-size: $description-font-size;
+}
+
+@mixin card-styles {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.grid-container {
+    &__title {
+        @include main-title;
+    }
+
+    &__cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin: 20px;
+    }
+
+    &__card {
+        @include card-styles;
+    }
+
+    &__subtitle {
+        @include card-title;
+    }
+
+    &__description {
+        @include card-description;
+    }
+}
+
+/* Для реализации стилей как на макете (рястягивании при переносе элемента на новую строку)
+    раскладка Grid не совсем подходит, т.к. суть грида заключается в том, что это именно сетка, и для того,
+    чтобы растянуть элементы перенесенные на новую строку необходимо задавать жесткие размеры.
+
+    Для примера привожу ниже использование медиа-запросов и псевдоселекторов. С их помощью можно реализовать
+    раскладку как в макете. Однако, я считаю этот метод костыльным, и для данного макета следует использовать Flex.
+*/
+
+/*
+@media (max-width: 1120px) {
+    .grid-container__card:last-of-type {
+        grid-column: 1 / -1;
+    }
+}
+*/
+
+.flex-container {
+    &__title {
+        @include main-title;
+    }
+
+    &__cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 20px;
+    }
+
+    &__card {
+        flex: 1 1 200px;
+        @include card-styles;
+    }
+    
+    &__subtitle {
+        @include card-title;
+    }
+
+    &__description {
+        @include card-description;
+    }
+}

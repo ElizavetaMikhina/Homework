@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid vs Flex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section class="grid-container">
+            <h1 class="grid-container__title">Grid</h1>
+            <div class="grid-container__cards-container">
+                <!-- Тег <article> я использовала с той точки зрения, что каждая карточка имеет заголовок и свое содержимое, а значит
+                    может являться независимым контентом. Возможно, это может показаться избыточным, но я решила так сделать, с точки зрения улучшения семантики -->
+                <article class="grid-container__card">
+                    <h2 class="grid-container__subtitle">Карточка 1</h2>
+                    <p class="grid-container__description">Содержимое карточки 1</p>
+                </article>
+                <article class="grid-container__card">
+                    <h2 class="grid-container__subtitle">Карточка 2</h2>
+                    <p class="grid-container__description">Содержимое карточки 2</p>
+                </article>
+                <article class="grid-container__card">
+                    <h2 class="grid-container__subtitle">Карточка 3</h2>
+                    <p class="grid-container__description">Содержимое карточки 3</p>
+                </article>
+                <article class="grid-container__card">
+                    <h2 class="grid-container__subtitle">Карточка 4</h2>
+                    <p class="grid-container__description">Содержимое карточки 4</p>
+                </article>
+                <article class="grid-container__card">
+                    <h2 class="grid-container__subtitle">Карточка 5</h2>
+                    <p class="grid-container__description">Содержимое карточки 5</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="flex-container">
+            <h1 class="flex-container__title">Flex</h1>
+            <div class="flex-container__cards-container">
+                <article class="flex-container__card">
+                    <h2 class="flex-container__subtitle">Карточка 1</h2>
+                    <p class="flex-container__description">Содержимое карточки 1</p>
+                </article>
+                <article class="flex-container__card">
+                    <h2 class="flex-container__subtitle">Карточка 2</h2>
+                    <p class="flex-container__description">Содержимое карточки 2</p>
+                </article>
+                <article class="flex-container__card">
+                    <h2 class="flex-container__subtitle">Карточка 3</h2>
+                    <p class="flex-container__description">Содержимое карточки 3</p>
+                </article>
+                <article class="flex-container__card">
+                    <h2 class="flex-container__subtitle">Карточка 4</h2>
+                    <p class="flex-container__description">Содержимое карточки 4</p>
+                </article>
+                <article class="flex-container__card">
+                    <h2 class="flex-container__subtitle">Карточка 5</h2>
+                    <p class="flex-container__description">Содержимое карточки 5</p>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
