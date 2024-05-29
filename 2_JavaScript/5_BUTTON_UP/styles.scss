@@ -1,0 +1,112 @@
+// Шрифты
+$font-primary: 'Open Sans', sans-serif;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Размер шрифта
+$basic-font-size: 16px;
+$main-title-font-size: 32px;
+$article-title-font-size: 24px;
+
+// Цвета
+$background-color: #333;
+$text-color-white: #fff;
+$botton-color: #81b6d4; 
+$botton-color-hover: #3493ca;
+
+// Отступы
+$padding-20px: 20px;
+
+// Миксины
+@mixin center-container() {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-primary;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: $basic-font-size;
+}
+
+.header {
+    background-color: $background-color;
+    color: $text-color-white;
+    padding: $padding-20px;
+
+    &__container {
+        @include center-container();
+    }
+
+    &__title {
+        margin: 0;
+        font-size: $main-title-font-size;
+    }
+}
+
+.content {
+    padding: $padding-20px;
+    @include center-container();
+
+    &__title {
+    font-size: $article-title-font-size;
+    margin-top: 20px;
+    }
+
+    &__text {
+    line-height: 1.5;
+    margin-top: 10px;
+    }
+}
+
+.footer {
+    background-color: $background-color;
+    color: $text-color-white;
+    padding: $padding-20px;
+
+    &__container {
+        @include center-container();
+    }
+
+    &__text {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.button-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    background-color: $botton-color;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    cursor: auto;
+
+    &.show {
+        opacity: 0.7;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $button-color-hover;
+            opacity: 0.9;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+}

@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.currency-converter__container {
+  background-color: #fff;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+@media (max-width: 768px) {
+  .currency-converter__container {
+    padding: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .currency-converter__container {
+    padding: 10px;
+  }
+}
+.currency-converter__title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .currency-converter__title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .currency-converter__title {
+    font-size: 16px;
+  }
+}
+.currency-converter__subtitle {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .currency-converter__subtitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+.currency-converter__currencies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  padding: 5px;
+  list-style: none;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .currency-converter__currencies {
+    gap: 8px;
+    padding: 4px;
+  }
+}
+@media (max-width: 480px) {
+  .currency-converter__currencies {
+    gap: 5px;
+    padding: 3px;
+  }
+}
+.currency-converter__currency {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 220px;
+  min-height: 50px;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .currency-converter__currency {
+    max-width: 180px;
+    min-height: 40px;
+    padding: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .currency-converter__currency {
+    max-width: 160px;
+    min-height: 35px;
+    padding: 6px;
+  }
+}
+.currency-converter__currency-title {
+  margin-right: 5px;
+}
+@media (max-width: 768px) {
+  .currency-converter__currency-title {
+    font-size: 14px;
+  }
+}
+.currency-converter__currency-title, .currency-converter__currency-rate {
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .currency-converter__currency-title, .currency-converter__currency-rate {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=styles.css.map */

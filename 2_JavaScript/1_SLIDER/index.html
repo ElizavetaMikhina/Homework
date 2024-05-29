@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLIDER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <section aria-label="Image Slider" class="slider">
+            <button id="prev-button" class="slider__nav-button slider__nav-button--prev" aria-label="Previous Image" aria-disabled="true">
+                <img src="img/arrow.svg" alt="Назад" class="slider__nav-button-img slider__nav-button-img--backward">
+            </button>
+            <div class="slider__container" role="region" aria-live="polite">
+                <div class="slider__slides" id="slider"></div>
+            </div>
+            <button id="next-button" class="slider__nav-button slider__nav-button--next" aria-label="Next Image">
+                <img src="img/arrow.svg" alt="Вперед" class="slider__nav-button-img slider__nav-button-img--forward">
+            </button>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

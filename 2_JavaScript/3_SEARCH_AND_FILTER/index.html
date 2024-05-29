@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCH AND FILTER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <section class="search">
+            <label for="searchInput" class="search__label">Введите текст для поиска:</label>
+            <input type="text" id="searchInput" class="search__input" aria-label="Поиск" placeholder="Введите текст для поиска...">
+        </section>
+        <section class="user-list" aria-live="polite">
+            <h2 class="user-list__title">Список пользователей</h2>
+            <ul class="user-list__items"></ul>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
